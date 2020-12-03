@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace Basgrupp
 {
@@ -12,15 +13,27 @@ namespace Basgrupp
 
         public static void Welcome()
         {
+            bool loop = true;
+            int loginAttempts = 3;
             Console.WriteLine("Hej! Ange koden på basgruppen för att logga in.");
-            string kodSvar = Console.ReadLine();
-            if (kodSvar == "Götebuggarna" || kodSvar == "götebuggarna")
+            while (loop)
             {
-                Console.WriteLine("Passed!");
-            }
-            else
-            {
-                System.Environment.Exit(1);
+                string kodSvar = Console.ReadLine();
+                if (kodSvar == "Götebuggarna" || kodSvar == "götebuggarna")
+                {
+                    Console.WriteLine("Korrekt!");
+                    loop = false;
+                }
+                else
+                {
+                    loginAttempts--;
+                    Console.WriteLine("Fel! " + loginAttempts + " försök kvar!");
+                    if (loginAttempts == 0)
+                    {
+                        Console.WriteLine("Applikationen stängs ner.");
+                        System.Environment.Exit(1);
+                    }
+                }
             }
         }
     }
