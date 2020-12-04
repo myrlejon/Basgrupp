@@ -116,7 +116,7 @@ namespace Basgrupp
                     else if (deleteMember == "Jonna" || deleteMember == "Jonna W"){MedlemLista.Remove(Jonna);}
                     else if (deleteMember == "Linus" || deleteMember == "Linus N"){MedlemLista.Remove(Linus);}
                     else if (deleteMember == "Nils" || deleteMember == "Nils O"){MedlemLista.Remove(Nils);}
-                    else if (deleteMember == "Yulrok"){MedlemLista.Remove(Yulrok);}
+                    else if (deleteMember == "Yulrok"){MedlemLista.Remove(Yulrok);} 
                 }
 
                 //Alternativ till att stänga ner programmet.
