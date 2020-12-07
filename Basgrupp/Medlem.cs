@@ -5,17 +5,17 @@ using System.Text;
 namespace Basgrupp
 {
     class Medlem {
-    private string namn;
-    private int ålder;
-    private string födelsedag;
-    private string mat;
-    private string band;
-    private string film;
-    private string älskar;
-    private string hatar;
-    private string stjärntecken;
-    private string superkraft;
-    private string driv;
+    public string namn;
+    public int ålder;
+    public string födelsedag;
+    public string mat;
+    public string band;
+    public string film;
+    public string älskar;
+    public string hatar;
+    public string stjärntecken;
+    public string superkraft;
+    public string driv;
 
     public Medlem()
     {
